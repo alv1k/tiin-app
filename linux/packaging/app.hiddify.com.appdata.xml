@@ -1,48 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Hiddify AppStream Metadata
+  tiin_vpn AppStream Metadata
   Place this file at: linux/packaging/myappid.appdata.xml
 -->
 <component type="desktop-application">
-  <id>app.hiddify.com</id>
+  <id>app.tiin_vpn.com</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>Hiddify</name>
+  <name>tiin_vpn</name>
   <summary>Modern Proxy and VPN Manager for Linux</summary>
 
-  <developer_name>Hiddify</developer_name>
-  <update_contact>linux@hiddify.com</update_contact>
+  <developer_name>tiin_vpn</developer_name>
+  <update_contact>linux@tiin_vpn.com</update_contact>
 
   <description>
     <p>
-      Hiddify is an advanced proxy and VPN client built for privacy and control. 
+      tiin_vpn is an advanced proxy and VPN client built for privacy and control. 
       It supports multiple backend protocols including V2Ray, Xray, Clash, and Sing-box, 
       providing flexibility and performance for all kinds of network configurations.
     </p>
     <p>
-      Designed with simplicity in mind, Hiddify helps users connect securely and 
+      Designed with simplicity in mind, tiin_vpn helps users connect securely and 
       manage complex proxy configurations through a clean graphical interface.
     </p>
   </description>
 
   <screenshots>
     <screenshot type="default">
-      <image>https://hiddify.com/assets/hiddify-next-mobile.svg</image>
-      <caption>Main Interface of Hiddify</caption>
+      <image>https://tiin_vpn.com/assets/tiin_vpn-next-mobile.svg</image>
+      <caption>Main Interface of tiin_vpn</caption>
     </screenshot>
   </screenshots>
 
-  <launchable type="desktop-id">hiddify.desktop</launchable>
+  <launchable type="desktop-id">tiin_vpn.desktop</launchable>
 
-  <icon type="stock">hiddify</icon>
+  <icon type="stock">tiin_vpn</icon>
 
   <categories>
     <category>Network</category>
   </categories>
 
   <keywords>
-    <keyword>Hiddify</keyword>
+    <keyword>tiin_vpn</keyword>
     <keyword>Proxy</keyword>
     <keyword>VPN</keyword>
     <keyword>V2Ray</keyword>
@@ -53,7 +53,7 @@
   </keywords>
 
   <mime-types>
-    <mime-type>x-scheme-handler/hiddify</mime-type>
+    <mime-type>x-scheme-handler/tiin_vpn</mime-type>
     <mime-type>x-scheme-handler/v2ray</mime-type>
     <mime-type>x-scheme-handler/v2rayn</mime-type>
     <mime-type>x-scheme-handler/v2rayng</mime-type>
@@ -62,26 +62,26 @@
     <mime-type>x-scheme-handler/sing-box</mime-type>
   </mime-types>
 
-  <url type="homepage">https://hiddify.com</url>
-  <url type="bugtracker">https://github.com/hiddify/hiddify-app/issues</url>
-  <url type="help">https://docs.hiddify.com</url>
+  <url type="homepage">https://tiin_vpn.com</url>
+  <url type="bugtracker">https://github.com/tiin_vpn/tiin_vpn-app/issues</url>
+  <url type="help">https://docs.tiin_vpn.com</url>
 
   <provides>
-    <binary>hiddify</binary>
+    <binary>tiin_vpn</binary>
   </provides>
 
   <releases>
     <release version="1.0.0" date="2025-10-25">
       <description>
-        <p>Initial Linux release of Hiddify with multi-protocol support and modern UI.</p>
+        <p>Initial Linux release of tiin_vpn with multi-protocol support and modern UI.</p>
       </description>
     </release>
   </releases>
 
-  <translation type="gettext">hiddify</translation>
+  <translation type="gettext">tiin_vpn</translation>
 
   <custom>
-    <value key="PackageName">hiddify</value>
+    <value key="PackageName">tiin_vpn</value>
     <value key="Priority">optional</value>
     <value key="Section">x11</value>
     <value key="InstalledSize">6604</value>

@@ -35,7 +35,7 @@ sealed class ConnectionFailure with _$ConnectionFailure, Failure {
   const factory ConnectionFailure.missiingWarpLicense() = MissingWarpLicense;
 
   @override
-  ({String type, String? message}) present(TranslationsEn t) {
+  ({String type, String? message}) present(TranslationsRu t) {
     return switch (this) {
       UnexpectedConnectionFailure(:final error) when error != null => (
         type: t.errors.connectivity.unexpected,

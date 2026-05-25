@@ -1,7 +1,7 @@
-import Foundation
+﻿import Foundation
 import Flutter
 import Combine
-import HiddifyCore
+import tiin_vpnCore
 
 public class StatsEventHandler: NSObject, FlutterPlugin, FlutterStreamHandler {
     

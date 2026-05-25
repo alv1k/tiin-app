@@ -7,7 +7,7 @@ enum PerAppProxyMode {
 
   bool get enabled => this != off;
 
-  ({String title, String message}) present(TranslationsEn t) => switch (this) {
+  ({String title, String message}) present(TranslationsRu t) => switch (this) {
     off => (
       title: t.pages.settings.routing.perAppProxy.modes.all,
       message: t.pages.settings.routing.perAppProxy.modes.allMsg,

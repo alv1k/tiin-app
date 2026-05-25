@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -10,10 +10,10 @@
 	<string>app-store</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>apple.hiddify.com</key>
-		<string>dist.apple.apple.hiddify.com</string>
-		<key>apple.hiddify.com.SingBoxPacketTunnel</key>
-		<string>dist.apple.apple.hiddify.com.singboxpackettunnel</string>
+		<key>apple.tiin_vpn.com</key>
+		<string>dist.apple.apple.tiin_vpn.com</string>
+		<key>apple.tiin_vpn.com.SingBoxPacketTunnel</key>
+		<string>dist.apple.apple.tiin_vpn.com.singboxpackettunnel</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>E2217AF6F3AD11BA09F9FD95E025D7E637F8B081</string>

@@ -1,6 +1,6 @@
 {
   "common": {
-    "appTitle": "Hiddify",
+    "appTitle": "TIIN",
     "start": "Начать",
     "version": "Версия",
     "ok": "OK",
@@ -109,7 +109,8 @@
       "sortOptions": {
         "unsorted": "По умолчанию",
         "name": "По алфавиту",
-        "delay": "По задержке"
+        "delay": "По задержке",
+        "usage": "По использованию"
       },
       "ipInfo": {
         "address": "IP-адрес",
@@ -291,6 +292,19 @@
           "roundRobin": "Round robin",
           "consistentHash": "Consistent hash",
           "stickySession": "Sticky session"
+        },
+        "stealth": {
+          "title": "Режим стелс",
+          "enableStealth": "Режим стелс",
+          "enableStealthMsg": "Включает все методы защиты от обнаружения VPN: фрагментацию TLS, uTLS, блокировку QUIC и IPv6",
+          "disableIPv6": "Отключить IPv6",
+          "disableIPv6Msg": "Предотвращает утечку IPv6-трафика мимо VPN",
+          "enableUTLS": "uTLS (подмена отпечатка)",
+          "enableUTLSMsg": "Подменяет TLS-отпечаток на браузер Chrome",
+          "blockQUIC": "Блокировать QUIC",
+          "blockQUICMsg": "QUIC может использоваться для обнаружения VPN",
+          "hideVPNNotification": "Скрыть уведомление VPN",
+          "hideVPNNotificationMsg": "Скрывает системное уведомление о VPN"
         },
         "blockAds": "Блокировать рекламу",
         "bypassLan": "Обход LAN",
@@ -575,6 +589,8 @@
       "thisWebsiteIsNotInOurTrustedList": "Этот сайт не входит в наш список доверенных. Пожалуйста, действуйте с осторожностью."
     },
     "proxyInfo": {
+      "upload": "Отправка:",
+      "download": "Загрузка:",
       "fullTag": "Полный тег:",
       "type": "Тип:",
       "testTime": "Время теста:",

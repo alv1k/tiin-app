@@ -19,6 +19,7 @@ import 'package:hiddify/features/settings/overview/sections/dns_options_page.dar
 import 'package:hiddify/features/settings/overview/sections/general_page.dart';
 import 'package:hiddify/features/settings/overview/sections/inbound_options_page.dart';
 import 'package:hiddify/features/settings/overview/sections/route_options_page.dart';
+import 'package:hiddify/features/settings/overview/sections/stealth_options_page.dart';
 import 'package:hiddify/features/settings/overview/sections/tls_tricks_page.dart';
 import 'package:hiddify/features/settings/overview/sections/warp_options_page.dart';
 import 'package:hiddify/features/settings/overview/settings_page.dart';
@@ -179,6 +180,12 @@ class RoutingConfigNotifier extends _$RoutingConfigNotifier {
                           path: '/per-app-proxy',
                           pageBuilder: (_, state) =>
                               customTransition(TransitionType.slide, state.pageKey, const PerAppProxyPage()),
+                        ),
+                        GoRoute(
+                          name: 'stealthOptions',
+                          path: '/stealth-options',
+                          pageBuilder: (_, state) =>
+                              customTransition(TransitionType.slide, state.pageKey, const StealthOptionsPage()),
                         ),
                       ],
                     ),

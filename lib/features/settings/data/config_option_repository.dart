@@ -38,6 +38,11 @@ abstract class ConfigOptions {
   );
   static final useXrayCoreWhenPossible = PreferencesNotifier.create<bool, bool>("use-xray-core-when-possible", false);
   static final blockAds = PreferencesNotifier.create<bool, bool>("block-ads", false);
+  static final stealthMode = PreferencesNotifier.create<bool, bool>("stealth-mode", true);
+  static final disableIPv6 = PreferencesNotifier.create<bool, bool>("disable-ipv6", true);
+  static final enableUTLS = PreferencesNotifier.create<bool, bool>("enable-utls", true);
+  static final blockQUIC = PreferencesNotifier.create<bool, bool>("block-quic", false);
+  static final hideVPNNotification = PreferencesNotifier.create<bool, bool>("hide-vpn-notification", true);
   static final logLevel = PreferencesNotifier.create<LogLevel, String>(
     "log-level",
     LogLevel.warn,

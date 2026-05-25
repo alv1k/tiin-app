@@ -76,6 +76,12 @@ class RouteOptionsPage extends HookConsumerWidget {
             choices: BalancerStrategy.values,
             presentChoice: (value) => value.present(t),
           ),
+          ListTile(
+            title: Text(t.pages.settings.routing.stealth.title),
+            leading: const Icon(Icons.shield_rounded),
+            trailing: const Icon(Icons.chevron_right_rounded),
+            onTap: () => context.goNamed('stealthOptions'),
+          ),
           SwitchListTile.adaptive(
             title: Text(t.pages.settings.routing.blockAds),
             secondary: const Icon(Icons.block_rounded),

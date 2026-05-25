@@ -1,5 +1,5 @@
-import Foundation
-import HiddifyCore
+﻿import Foundation
+import tiin_vpnCore
 
 public class CommandClient: ObservableObject {
     public enum ConnectionType {

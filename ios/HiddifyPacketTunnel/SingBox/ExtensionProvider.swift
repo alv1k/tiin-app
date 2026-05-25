@@ -1,11 +1,11 @@
-import Foundation
-import HiddifyCore
+﻿import Foundation
+import tiin_vpnCore
 import NetworkExtension
 import os.log
 
 open class ExtensionProvider: NEPacketTunnelProvider {
     public static let errorFile = FilePath.workingDirectory.appendingPathComponent("network_extension_error.log")
-    private let logger = Logger(subsystem: "apple.hiddify.com.HiddifyPacketTunnel", category: "PacketTunnel")
+    private let logger = Logger(subsystem: "apple.tiin_vpn.com.tiin_vpnPacketTunnel", category: "PacketTunnel")
     
 //    private var commandServer: LibboxCommandServer!
     private var systemProxyAvailable = false

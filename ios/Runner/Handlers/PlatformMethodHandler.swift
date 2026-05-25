@@ -1,13 +1,13 @@
-//
+﻿//
 //  PlatformMethodHandler.swift
 //  Runner
 //
-//  Created by Hiddify on 12/27/23.
+//  Created by tiin_vpn on 12/27/23.
 //
 
 import Flutter
 import Combine
-import HiddifyCore
+import tiin_vpnCore
 
 public class PlatformMethodHandler: NSObject, FlutterPlugin {
         

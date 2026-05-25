@@ -1,26 +1,26 @@
-// swift-tools-version: 5.4
+﻿// swift-tools-version: 5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-     name: "Hiddify Packages",
+     name: "tiin_vpn Packages",
      platforms: [
         // Minimum platform version
          .iOS(.v13)
      ],
      products: [
          .library(
-             name: "HiddifyCore",
-             targets: ["HiddifyCore"]),
+             name: "tiin_vpnCore",
+             targets: ["tiin_vpnCore"]),
      ],
      dependencies: [
          // No dependencies
      ],
      targets: [
         .binaryTarget(
-            name: "HiddifyCore",
-            path: "../Frameworks/HiddifyCore.xcframework"
+            name: "tiin_vpnCore",
+            path: "../Frameworks/tiin_vpnCore.xcframework"
         )
      ]
  )

@@ -1,6 +1,6 @@
-import UIKit
+﻿import UIKit
 import Flutter
-import HiddifyCore
+import tiin_vpnCore
 import Sentry
 @main
 @objc class AppDelegate: FlutterAppDelegate {

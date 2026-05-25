@@ -1,6 +1,6 @@
-import Foundation
+﻿import Foundation
 import Combine
-import HiddifyCore
+import tiin_vpnCore
 
 public class ActiveGroupsEventHandler: NSObject, FlutterPlugin, FlutterStreamHandler {
     

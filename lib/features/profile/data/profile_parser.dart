@@ -12,6 +12,7 @@ import 'package:hiddify/features/profile/model/profile_failure.dart';
 import 'package:hiddify/features/settings/data/config_option_repository.dart';
 import 'package:hiddify/singbox/model/singbox_proxy_type.dart';
 import 'package:hiddify/utils/utils.dart';
+import 'package:hiddify/utils/custom_loggers.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:meta/meta.dart';
 
@@ -27,7 +28,7 @@ import 'package:meta/meta.dart';
 /// - remote:  fallback to `Remote Profile`
 /// - local: fallback to protocol, extracted from content by protocol()
 
-class ProfileParser {
+class ProfileParser with InfraLogger {
   static const infiniteTrafficThreshold = 920_233_720_368;
   static const infiniteTimeThreshold = 92_233_720_368;
   static const allowedOverrideConfigs = [
@@ -146,9 +147,7 @@ class ProfileParser {
     String tempFilePath,
     CancelToken? cancelToken,
   ) => TaskEither.tryCatch(() async {
-    // if (url.startsWith("http://"))
-    //   throw const ProfileFailure.invalidUrl('HTTP is not supported. Please use HTTPS for secure connection.');
-
+    loggy.debug("downloading profile from: $url");
     final rs = await _httpClient
         .download(
           url.trim(),
@@ -159,6 +158,7 @@ class ProfileParser {
               : null,
         )
         .catchError((err) {
+          loggy.error("download error: $err");
           if (CancelToken.isCancel(err as DioException)) {
             throw const ProfileFailure.cancelByUser('HTTP request for getting profile content canceled by user.');
           }
@@ -170,12 +170,16 @@ class ProfileParser {
       cancelToken: cancelToken ?? CancelToken(),
       ref: _ref,
     );
+    loggy.debug("download complete, processing headers");
     // fixing headers before return
     return rs.headers.map.map((key, value) {
       if (value.length == 1) return MapEntry(key, value.first);
       return MapEntry(key, value);
     });
-  }, (err, st) => err is ProfileFailure ? err : ProfileFailure.unexpected(err, st));
+  }, (err, st) {
+    loggy.error("failed to download profile: $err", err, st);
+    return err is ProfileFailure ? err : ProfileFailure.unexpected(err, st);
+  });
   Future<void> expandRemoteLinesInParallel({
     required String tempFilePath,
     required DioHttpClient httpClient,

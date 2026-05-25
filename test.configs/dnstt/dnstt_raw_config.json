@@ -1,9 +1,9 @@
-
+﻿
 {
 "outbounds": [
     {
       "type": "dnstt",
-      "tag": "§hide§ § 0",
+      "tag": "В§hideВ§ В§ 0",
       "publicKey": "publickey",
       "domain": "yourdomain",
       "resolvers": [
@@ -17,17 +17,17 @@
     {
       "type": "socks",
       "tag": "select",
-      "detour": "§hide§ § 0",
+      "detour": "В§hideВ§ В§ 0",
       "server": "",
       "server_port": 0
     },
     {
       "type": "direct",
-      "tag": "direct §hide§"
+      "tag": "direct В§hideВ§"
     },
     {
       "type": "direct",
-      "tag": "direct-fragment §hide§",
+      "tag": "direct-fragment В§hideВ§",
       "tls_fragment": {
         "enabled": true,
         "size": "10-30",
@@ -90,7 +90,7 @@
       {
         "type": "https",
         "tag": "dns-trick-direct",
-        "detour": "direct-fragment §hide§",
+        "detour": "direct-fragment В§hideВ§",
         "domain_resolver": {
           "server": "dns-direct",
           "strategy": "prefer_ipv4"
@@ -118,7 +118,7 @@
       {
         "type": "tcp",
         "tag": "dns-remote-no-warp",
-        "detour": "direct-fragment §hide§",
+        "detour": "direct-fragment В§hideВ§",
         "server": "1.1.1.1"
       },
       {
@@ -192,28 +192,28 @@
       },
       {
         "domain_suffix": ".ir",
-        "outbound": "direct §hide§"
+        "outbound": "direct В§hideВ§"
       },
       {
         "rule_set": [
           "geoip-ir",
           "geosite-ir"
         ],
-        "outbound": "direct §hide§"
+        "outbound": "direct В§hideВ§"
       }
     ],
     "rule_set": [
       {
         "type": "remote",
         "tag": "geoip-ir",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "url": "https://raw.githubusercontent.com/tiin_vpn/tiin_vpn-geo/rule-set/country/geoip-ir.srs",
         "download_detour": "select",
         "update_interval": "120h0m0s"
       },
       {
         "type": "remote",
         "tag": "geosite-ir",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "url": "https://raw.githubusercontent.com/tiin_vpn/tiin_vpn-geo/rule-set/country/geosite-ir.srs",
         "download_detour": "select",
         "update_interval": "120h0m0s"
       }

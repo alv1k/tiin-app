@@ -1,4 +1,4 @@
-//
+﻿//
 //  VPNManager.swift
 //  Runner
 //
@@ -99,10 +99,10 @@ class VPNManager: ObservableObject {
             }
             let newManager = NETunnelProviderManager()
             let `protocol` = NETunnelProviderProtocol()
-            `protocol`.providerBundleIdentifier = Bundle.main.baseBundleIdentifier + ".HiddifyPacketTunnel"
+            `protocol`.providerBundleIdentifier = Bundle.main.baseBundleIdentifier + ".tiin_vpnPacketTunnel"
             `protocol`.serverAddress = "localhost"
             newManager.protocolConfiguration = `protocol`
-            newManager.localizedDescription = "Hiddify"
+            newManager.localizedDescription = "tiin_vpn"
             try await newManager.saveToPreferences()
             try await newManager.loadFromPreferences()
             self.manager = newManager

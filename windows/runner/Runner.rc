@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+﻿// Microsoft Visual C++ generated resource script.
 //
 #pragma code_page(65001)
 #include "resource.h"
@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "Hiddify" "\0"
-            VALUE "FileDescription", "Hiddify" "\0"
+            VALUE "CompanyName", "TIIN" "\0"
+            VALUE "FileDescription", "TIIN VPN" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "hiddify" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 Hiddify.com. All rights reserved." "\0"
-            VALUE "OriginalFilename", "Hiddify.exe" "\0"
-            VALUE "ProductName", "hiddify" "\0"
+            VALUE "InternalName", "tiin_vpn" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 TIIN Service. All rights reserved." "\0"
+            VALUE "OriginalFilename", "tiin_vpn.exe" "\0"
+            VALUE "ProductName", "TIIN VPN" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,6 +1,6 @@
 {
   "common": {
-    "appTitle": "Hiddify",
+    "appTitle": "TIIN",
     "start": "Start",
     "version": "Version",
     "ok": "OK",
@@ -288,6 +288,19 @@
           "roundRobin": "Round robin",
           "consistentHash": "Consistent hash",
           "stickySession": "Sticky session"
+        },
+        "stealth": {
+          "title": "Stealth mode",
+          "enableStealth": "Stealth mode",
+          "enableStealthMsg": "Enables all VPN detection protection: TLS fragmentation, uTLS, QUIC and IPv6 blocking",
+          "disableIPv6": "Disable IPv6",
+          "disableIPv6Msg": "Prevents IPv6 traffic leak outside VPN",
+          "enableUTLS": "uTLS (fingerprint spoofing)",
+          "enableUTLSMsg": "Spoofs TLS fingerprint to Chrome browser",
+          "blockQUIC": "Block QUIC",
+          "blockQUICMsg": "QUIC can be used to detect VPN",
+          "hideVPNNotification": "Hide VPN notification",
+          "hideVPNNotificationMsg": "Hides system VPN notification"
         },
         "blockAds": "Block advertisements",
         "bypassLan": "Bypass LAN",

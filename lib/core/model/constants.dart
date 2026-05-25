@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 abstract class Constants {
-  static const appName = "Hiddify";
-  static const githubUrl = "https://github.com/hiddify/hiddify-next";
-  static const licenseUrl = "https://github.com/hiddify/hiddify-next?tab=License-1-ov-file#readme";
-  static const githubReleasesApiUrl = "https://api.github.com/repos/hiddify/hiddify-next/releases";
-  static const githubLatestReleaseUrl = "https://github.com/hiddify/hiddify-app/releases/latest";
-  static const appCastUrl = "https://raw.githubusercontent.com/hiddify/hiddify-next/main/appcast.xml";
-  static const telegramChannelUrl = "https://t.me/hiddify";
-  static const privacyPolicyUrl = "https://hiddify.com/privacy-policy/";
-  static const termsAndConditionsUrl = "https://hiddify.com/terms/";
+  static const appName = "TIIN";
+  static const githubUrl = "https://github.com/tiin-vpn/tiin-vpn-app";
+  static const licenseUrl = "https://github.com/tiin-vpn/tiin-vpn-app/blob/main/LICENSE";
+  static const githubReleasesApiUrl = "https://api.github.com/repos/tiin-vpn/tiin-vpn-app/releases";
+  static const githubLatestReleaseUrl = "https://github.com/tiin-vpn/tiin-vpn-app/releases/latest";
+  static const appCastUrl = "https://raw.githubusercontent.com/tiin-vpn/tiin-vpn-app/main/appcast.xml";
+  static const telegramChannelUrl = "https://t.me/tiinservice";
+  static const privacyPolicyUrl = "https://tiinservice.ru/privacy";
+  static const termsAndConditionsUrl = "https://tiinservice.ru/terms";
   static const cfWarpPrivacyPolicy = "https://www.cloudflare.com/application/privacypolicy/";
   static const cfWarpTermsOfService = "https://www.cloudflare.com/application/terms/";
+  static const tiinServiceUrl = "https://tiinservice.ru";
+  static const tiinSubscribeUrl = "https://344988.snk.wtf/sub/";
 }
 
 const kAnimationDuration = Duration(milliseconds: 250);

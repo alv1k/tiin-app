@@ -1,4 +1,4 @@
-//
+﻿//
 //  ExtensionPlatformInterface.swift
 //  SingBoxPacketTunnel
 //
@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import HiddifyCore
+import tiin_vpnCore
 import NetworkExtension
 
 public class ExtensionPlatformInterface: NSObject, LibboxPlatformInterfaceProtocol {

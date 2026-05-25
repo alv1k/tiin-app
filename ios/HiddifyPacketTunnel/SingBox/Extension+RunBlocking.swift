@@ -1,4 +1,4 @@
-//
+﻿//
 //  Extension+RunBlocking.swift
 //  SingBoxPacketTunnel
 //
@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import HiddifyCore
+import tiin_vpnCore
 import NetworkExtension
 
 func runBlocking<T>(_ block: @escaping () async -> T) -> T {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1540"
    wasCreatedForAppExtension = "YES"
@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03E392B52ADDA00E000ADF15"
-               BuildableName = "HiddifyPacketTunnel.appex"
-               BlueprintName = "HiddifyPacketTunnel"
+               BuildableName = "tiin_vpnPacketTunnel.appex"
+               BlueprintName = "tiin_vpnPacketTunnel"
                ReferencedContainer = "container:Runner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,7 +58,7 @@
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "apple.hiddify.com"
+         BundleIdentifier = "apple.tiin_vpn.com"
          RemotePath = "/var/containers/Bundle/Application/8EBA9FC7-47CA-4C36-B670-54E8EB45F196/Runner.app">
       </RemoteRunnable>
       <MacroExpansion>

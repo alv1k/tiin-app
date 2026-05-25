@@ -1,10 +1,10 @@
-include: package:lint/strict.yaml
+﻿include: package:lint/strict.yaml
 
 analyzer:
   plugins:
     - custom_lint
   exclude:
-    - "hiddify-core/**"
+    - "tiin_vpn-core/**"
     - "**.g.dart"
     - "lib/gen/**"
   errors:

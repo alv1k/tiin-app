@@ -1,6 +1,6 @@
-import Foundation
+﻿import Foundation
 import Combine
-import HiddifyCore
+import tiin_vpnCore
 
 class LogsEventHandler: NSObject, FlutterPlugin, FlutterStreamHandler {
     static let name = "\(Bundle.main.serviceIdentifier)/service.logs"

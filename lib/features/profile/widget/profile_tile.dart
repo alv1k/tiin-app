@@ -319,7 +319,7 @@ class ProfileSubscriptionInfo extends HookConsumerWidget {
 
   final SubscriptionInfo subInfo;
 
-  (String, Color?) remainingText(TranslationsEn t, ThemeData theme) {
+  (String, Color?) remainingText(TranslationsRu t, ThemeData theme) {
     if (subInfo.isExpired) {
       return (t.components.subscriptionInfo.expired, theme.colorScheme.error);
     } else if (subInfo.ratio >= 1) {
@@ -418,7 +418,7 @@ class NewDaySubscriptionInfo extends HookConsumerWidget {
 
   final SubscriptionInfo subInfo;
 
-  (String, Color?) remainingText(TranslationsEn t, ThemeData theme) {
+  (String, Color?) remainingText(TranslationsRu t, ThemeData theme) {
     if (subInfo.isExpired) {
       return (t.components.subscriptionInfo.expired, theme.colorScheme.error);
     } else if (subInfo.ratio >= 1) {
@@ -465,7 +465,7 @@ class NewDayTrafficSubscriptionInfo extends HookConsumerWidget {
 
   final SubscriptionInfo subInfo;
 
-  (String, Color?) remainingText(TranslationsEn t, ThemeData theme) {
+  (String, Color?) remainingText(TranslationsRu t, ThemeData theme) {
     if (subInfo.isExpired) {
       return (t.components.subscriptionInfo.expired, theme.colorScheme.error);
     } else if (subInfo.ratio >= 1) {

@@ -12,7 +12,7 @@ sealed class SettingsFailure with _$SettingsFailure, Failure {
   const factory SettingsFailure.unexpected([Object? error, StackTrace? stackTrace]) = SettingsUnexpectedFailure;
 
   @override
-  ({String type, String? message}) present(TranslationsEn t) {
+  ({String type, String? message}) present(TranslationsRu t) {
     return switch (this) {
       SettingsUnexpectedFailure() => (type: t.errors.unexpected, message: null),
     };

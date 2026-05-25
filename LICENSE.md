@@ -1,22 +1,22 @@
-# Hiddify Extended GNU General Public License v3
+﻿# tiin_vpn Extended GNU General Public License v3
 
-The Hiddify project is licensed under GPL v3, with the following additional conditions in accordance with GPL v3 Section 7. Failure to comply with these terms may result in requests to app stores to remove or restrict access to your app.
+The tiin_vpn project is licensed under GPL v3, with the following additional conditions in accordance with GPL v3 Section 7. Failure to comply with these terms may result in requests to app stores to remove or restrict access to your app.
 
 # Additional Conditions to GPL v3:
-1.	**Source Code Availability:** If you use any part of this code, you must publish your source code on GitHub as a fork of the Hiddify repository and keep it up-to-date with any published app releases. Your repository should be shown as a fork of  https://github.com/hiddify/hiddify-app .
+1.	**Source Code Availability:** If you use any part of this code, you must publish your source code on GitHub as a fork of the tiin_vpn repository and keep it up-to-date with any published app releases. Your repository should be shown as a fork of  https://github.com/tiin_vpn/tiin_vpn-app .
 2.	**Automated Release:** All releases must be made using GitHub Actions.
-3.	**Attribution:** You must give appropriate credit to Hiddify and https://github.com/hiddify/hiddify-app, link to the original license, and document any changes you have made in Readme.
+3.	**Attribution:** You must give appropriate credit to tiin_vpn and https://github.com/tiin_vpn/tiin_vpn-app, link to the original license, and document any changes you have made in Readme.
 4.	**No Malware:** Adding any malware to the app is strictly prohibited.
-5.	**Naming and Interface Restrictions:** You are not allowed to  publish the app on any app store (e.g., AppStore, Google Play, F-Droid, Microsoft) with a name or user interface that closely resembles Hiddify (e.g., names like Hiddify, Hidy*, Hiddy*, *Ify or similar UI are prohibited).
+5.	**Naming and Interface Restrictions:** You are not allowed to  publish the app on any app store (e.g., AppStore, Google Play, F-Droid, Microsoft) with a name or user interface that closely resembles tiin_vpn (e.g., names like tiin_vpn, Hidy*, Hiddy*, *Ify or similar UI are prohibited).
 6.	**NonCommercial Use Only:** You may not use this material for commercial purposes, including selling and advertising, without prior written consent.
-7.	**ShareAlike Requirement:** If you remix, transform, or build upon the material, you must distribute your contributions under this same license as an open-source fork of https://github.com/hiddify/hiddify-app .
+7.	**ShareAlike Requirement:** If you remix, transform, or build upon the material, you must distribute your contributions under this same license as an open-source fork of https://github.com/tiin_vpn/tiin_vpn-app .
 
  
 GNU General Public License
 ==========================
 
 _Version 3, 29 June 2007_  
-_Copyright © 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_
+_Copyright В© 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_
 
 Everyone is permitted to copy and distribute verbatim copies of this license
 document, but changing it is not allowed.
@@ -81,34 +81,34 @@ The precise terms and conditions for copying, distribution and modification foll
 
 ### 0. Definitions
 
-“This License” refers to version 3 of the GNU General Public License.
+вЂњThis LicenseвЂќ refers to version 3 of the GNU General Public License.
 
-“Copyright” also means copyright-like laws that apply to other kinds of
+вЂњCopyrightвЂќ also means copyright-like laws that apply to other kinds of
 works, such as semiconductor masks.
 
-“The Program” refers to any copyrightable work licensed under this
-License. Each licensee is addressed as “you”. “Licensees” and
-“recipients” may be individuals or organizations.
+вЂњThe ProgramвЂќ refers to any copyrightable work licensed under this
+License. Each licensee is addressed as вЂњyouвЂќ. вЂњLicenseesвЂќ and
+вЂњrecipientsвЂќ may be individuals or organizations.
 
-To “modify” a work means to copy from or adapt all or part of the work in
+To вЂњmodifyвЂќ a work means to copy from or adapt all or part of the work in
 a fashion requiring copyright permission, other than the making of an exact copy. The
-resulting work is called a “modified version” of the earlier work or a
-work “based on” the earlier work.
+resulting work is called a вЂњmodified versionвЂќ of the earlier work or a
+work вЂњbased onвЂќ the earlier work.
 
-A “covered work” means either the unmodified Program or a work based on
+A вЂњcovered workвЂќ means either the unmodified Program or a work based on
 the Program.
 
-To “propagate” a work means to do anything with it that, without
+To вЂњpropagateвЂќ a work means to do anything with it that, without
 permission, would make you directly or secondarily liable for infringement under
 applicable copyright law, except executing it on a computer or modifying a private
 copy. Propagation includes copying, distribution (with or without modification),
 making available to the public, and in some countries other activities as well.
 
-To “convey” a work means any kind of propagation that enables other
+To вЂњconveyвЂќ a work means any kind of propagation that enables other
 parties to make or receive copies. Mere interaction with a user through a computer
 network, with no transfer of a copy, is not conveying.
 
-An interactive user interface displays “Appropriate Legal Notices” to the
+An interactive user interface displays вЂњAppropriate Legal NoticesвЂќ to the
 extent that it includes a convenient and prominently visible feature that **(1)**
 displays an appropriate copyright notice, and **(2)** tells the user that there is no
 warranty for the work (except to the extent that warranties are provided), that
@@ -118,26 +118,26 @@ menu, a prominent item in the list meets this criterion.
 
 ### 1. Source Code
 
-The “source code” for a work means the preferred form of the work for
-making modifications to it. “Object code” means any non-source form of a
+The вЂњsource codeвЂќ for a work means the preferred form of the work for
+making modifications to it. вЂњObject codeвЂќ means any non-source form of a
 work.
 
-A “Standard Interface” means an interface that either is an official
+A вЂњStandard InterfaceвЂќ means an interface that either is an official
 standard defined by a recognized standards body, or, in the case of interfaces
 specified for a particular programming language, one that is widely used among
 developers working in that language.
 
-The “System Libraries” of an executable work include anything, other than
+The вЂњSystem LibrariesвЂќ of an executable work include anything, other than
 the work as a whole, that **(a)** is included in the normal form of packaging a Major
 Component, but which is not part of that Major Component, and **(b)** serves only to
 enable use of the work with that Major Component, or to implement a Standard
 Interface for which an implementation is available to the public in source code form.
-A “Major Component”, in this context, means a major essential component
+A вЂњMajor ComponentвЂќ, in this context, means a major essential component
 (kernel, window system, and so on) of the specific operating system (if any) on which
 the executable work runs, or a compiler used to produce the work, or an object code
 interpreter used to run it.
 
-The “Corresponding Source” for a work in object code form means all the
+The вЂњCorresponding SourceвЂќ for a work in object code form means all the
 source code needed to generate, install, and (for an executable work) run the object
 code and to modify the work, including scripts to control those activities. However,
 it does not include the work's System Libraries, or general-purpose tools or
@@ -211,7 +211,7 @@ you also meet all of these conditions:
 relevant date.
 * **b)** The work must carry prominent notices stating that it is released under this
 License and any conditions added under section 7. This requirement modifies the
-requirement in section 4 to “keep intact all notices”.
+requirement in section 4 to вЂњkeep intact all noticesвЂќ.
 * **c)** You must license the entire work, as a whole, under this License to anyone who
 comes into possession of a copy. This License will therefore apply, along with any
 applicable section 7 additional terms, to the whole of the work, and all its parts,
@@ -225,7 +225,7 @@ Appropriate Legal Notices, your work need not make them do so.
 A compilation of a covered work with other separate and independent works, which are
 not by their nature extensions of the covered work, and which are not combined with
 it such as to form a larger program, in or on a volume of a storage or distribution
-medium, is called an “aggregate” if the compilation and its resulting
+medium, is called an вЂњaggregateвЂќ if the compilation and its resulting
 copyright are not used to limit the access or legal rights of the compilation's users
 beyond what the individual works permit. Inclusion of a covered work in an aggregate
 does not cause this License to apply to the other parts of the aggregate.
@@ -270,19 +270,19 @@ A separable portion of the object code, whose source code is excluded from the
 Corresponding Source as a System Library, need not be included in conveying the
 object code work.
 
-A “User Product” is either **(1)** a “consumer product”, which
+A вЂњUser ProductвЂќ is either **(1)** a вЂњconsumer productвЂќ, which
 means any tangible personal property which is normally used for personal, family, or
 household purposes, or **(2)** anything designed or sold for incorporation into a
 dwelling. In determining whether a product is a consumer product, doubtful cases
 shall be resolved in favor of coverage. For a particular product received by a
-particular user, “normally used” refers to a typical or common use of
+particular user, вЂњnormally usedвЂќ refers to a typical or common use of
 that class of product, regardless of the status of the particular user or of the way
 in which the particular user actually uses, or expects or is expected to use, the
 product. A product is a consumer product regardless of whether the product has
 substantial commercial, industrial or non-consumer uses, unless such uses represent
 the only significant mode of use of the product.
 
-“Installation Information” for a User Product means any methods,
+вЂњInstallation InformationвЂќ for a User Product means any methods,
 procedures, authorization keys, or other information required to install and execute
 modified versions of a covered work in that User Product from a modified version of
 its Corresponding Source. The information must suffice to ensure that the continued
@@ -312,7 +312,7 @@ special password or key for unpacking, reading or copying.
 
 ### 7. Additional Terms
 
-“Additional permissions” are terms that supplement the terms of this
+вЂњAdditional permissionsвЂќ are terms that supplement the terms of this
 License by making exceptions from one or more of its conditions. Additional
 permissions that are applicable to the entire Program shall be treated as though they
 were included in this License, to the extent that they are valid under applicable
@@ -347,8 +347,8 @@ who conveys the material (or modified versions of it) with contractual assumptio
 liability to the recipient, for any liability that these contractual assumptions
 directly impose on those licensors and authors.
 
-All other non-permissive additional terms are considered “further
-restrictions” within the meaning of section 10. If the Program as you received
+All other non-permissive additional terms are considered вЂњfurther
+restrictionsвЂќ within the meaning of section 10. If the Program as you received
 it, or any part of it, contains a notice stating that it is governed by this License
 along with a term that is a further restriction, you may remove that term. If a
 license document contains a further restriction but permits relicensing or conveying
@@ -405,7 +405,7 @@ from the original licensors, to run, modify and propagate that work, subject to 
 License. You are not responsible for enforcing compliance by third parties with this
 License.
 
-An “entity transaction” is a transaction transferring control of an
+An вЂњentity transactionвЂќ is a transaction transferring control of an
 organization, or substantially all assets of one, or subdividing an organization, or
 merging organizations. If propagation of a covered work results from an entity
 transaction, each party to that transaction who receives a copy of the work also
@@ -423,16 +423,16 @@ importing the Program or any portion of it.
 
 ### 11. Patents
 
-A “contributor” is a copyright holder who authorizes use under this
+A вЂњcontributorвЂќ is a copyright holder who authorizes use under this
 License of the Program or a work on which the Program is based. The work thus
-licensed is called the contributor's “contributor version”.
+licensed is called the contributor's вЂњcontributor versionвЂќ.
 
-A contributor's “essential patent claims” are all patent claims owned or
+A contributor's вЂњessential patent claimsвЂќ are all patent claims owned or
 controlled by the contributor, whether already acquired or hereafter acquired, that
 would be infringed by some manner, permitted by this License, of making, using, or
 selling its contributor version, but do not include claims that would be infringed
 only as a consequence of further modification of the contributor version. For
-purposes of this definition, “control” includes the right to grant patent
+purposes of this definition, вЂњcontrolвЂќ includes the right to grant patent
 sublicenses in a manner consistent with the requirements of this License.
 
 Each contributor grants you a non-exclusive, worldwide, royalty-free patent license
@@ -440,10 +440,10 @@ under the contributor's essential patent claims, to make, use, sell, offer for s
 import and otherwise run, modify and propagate the contents of its contributor
 version.
 
-In the following three paragraphs, a “patent license” is any express
+In the following three paragraphs, a вЂњpatent licenseвЂќ is any express
 agreement or commitment, however denominated, not to enforce a patent (such as an
 express permission to practice a patent or covenant not to sue for patent
-infringement). To “grant” such a patent license to a party means to make
+infringement). To вЂњgrantвЂќ such a patent license to a party means to make
 such an agreement or commitment not to enforce a patent against the party.
 
 If you convey a covered work, knowingly relying on a patent license, and the
@@ -453,7 +453,7 @@ other readily accessible means, then you must either **(1)** cause the Correspon
 Source to be so available, or **(2)** arrange to deprive yourself of the benefit of the
 patent license for this particular work, or **(3)** arrange, in a manner consistent with
 the requirements of this License, to extend the patent license to downstream
-recipients. “Knowingly relying” means you have actual knowledge that, but
+recipients. вЂњKnowingly relyingвЂќ means you have actual knowledge that, but
 for the patent license, your conveying the covered work in a country, or your
 recipient's use of the covered work in a country, would infringe one or more
 identifiable patents in that country that you have reason to believe are valid.
@@ -465,7 +465,7 @@ propagate, modify or convey a specific copy of the covered work, then the patent
 license you grant is automatically extended to all recipients of the covered work and
 works based on it.
 
-A patent license is “discriminatory” if it does not include within the
+A patent license is вЂњdiscriminatoryвЂќ if it does not include within the
 scope of its coverage, prohibits the exercise of, or is conditioned on the
 non-exercise of one or more of the rights that are specifically granted under this
 License. You may not convey a covered work if you are a party to an arrangement with
@@ -509,8 +509,8 @@ General Public License from time to time. Such new versions will be similar in s
 to the present version, but may differ in detail to address new problems or concerns.
 
 Each version is given a distinguishing version number. If the Program specifies that
-a certain numbered version of the GNU General Public License “or any later
-version” applies to it, you have the option of following the terms and
+a certain numbered version of the GNU General Public License вЂњor any later
+versionвЂќ applies to it, you have the option of following the terms and
 conditions either of that numbered version or of any later version published by the
 Free Software Foundation. If the Program does not specify a version number of the GNU
 General Public License, you may choose any version ever published by the Free
@@ -528,7 +528,7 @@ your choosing to follow a later version.
 
 THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
 EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER
+PROVIDE THE PROGRAM вЂњAS ISвЂќ WITHOUT WARRANTY OF ANY KIND, EITHER
 EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE
 QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE
@@ -563,7 +563,7 @@ can redistribute and change under these terms.
 
 To do so, attach the following notices to the program. It is safest to attach them
 to the start of each source file to most effectively state the exclusion of warranty;
-and each file should have at least the “copyright” line and a pointer to
+and each file should have at least the вЂњcopyrightвЂќ line and a pointer to
 where the full notice is found.
 
     <one line to give the program's name and a brief idea of what it does.>
@@ -594,10 +594,10 @@ when it starts in an interactive mode:
 
 The hypothetical commands `show w` and `show c` should show the appropriate parts of
 the General Public License. Of course, your program's commands might be different;
-for a GUI interface, you would use an “about box”.
+for a GUI interface, you would use an вЂњabout boxвЂќ.
 
 You should also get your employer (if you work as a programmer) or school, if any, to
-sign a “copyright disclaimer” for the program, if necessary. For more
+sign a вЂњcopyright disclaimerвЂќ for the program, if necessary. For more
 information on this, and how to apply and follow the GNU GPL, see
 &lt;<http://www.gnu.org/licenses/>&gt;.
 

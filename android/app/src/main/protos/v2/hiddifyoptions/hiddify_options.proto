@@ -30,6 +30,11 @@ message HiddifyOptions {
   InboundOptions inbound_options = 16; // Inbound connection options.
   URLTestOptions url_test_options = 17; // URL test configuration options.
   RouteOptions route_options = 18; // Routing-related options.
+  bool disable_ipv6 = 19; // If true, disables IPv6.
+  bool enable_utls = 20; // If true, enables uTLS fingerprint spoofing.
+  bool block_quic = 21; // If true, blocks QUIC protocol.
+  bool hide_vpn_notification = 22; // If true, hides VPN notification.
+  bool stealth_mode = 23; // If true, enables all stealth features.
 }
 
 /**

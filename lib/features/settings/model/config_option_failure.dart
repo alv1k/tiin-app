@@ -15,7 +15,7 @@ sealed class ConfigOptionFailure with _$ConfigOptionFailure, Failure {
   const factory ConfigOptionFailure.missingWarp() = MissingWarpConfigFailure;
 
   @override
-  ({String type, String? message}) present(TranslationsEn t) {
+  ({String type, String? message}) present(TranslationsRu t) {
     return switch (this) {
       ConfigOptionUnexpectedFailure() => (type: t.errors.unexpected, message: null),
       MissingWarpConfigFailure() => (type: t.pages.settings.warp.missingConfig, message: null),
