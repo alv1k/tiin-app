@@ -6,6 +6,8 @@ import 'package:hiddify/core/router/dialog/widgets/custom_alert_dialog.dart';
 import 'package:hiddify/core/router/dialog/widgets/experimental_feature_notice.dart';
 import 'package:hiddify/core/router/dialog/widgets/free_profile_consent_dialog.dart';
 import 'package:hiddify/core/router/dialog/widgets/new_version_dialog.dart';
+import 'package:hiddify/features/core_update/widget/core_update_dialog.dart';
+import 'package:hiddify/features/core_update/widget/core_update_mobile_notification.dart';
 import 'package:hiddify/core/router/dialog/widgets/no_active_profile_dialog.dart';
 import 'package:hiddify/core/router/dialog/widgets/ok_dialog.dart';
 import 'package:hiddify/core/router/dialog/widgets/proxy_info_dialog.dart';
@@ -22,6 +24,7 @@ import 'package:hiddify/core/router/dialog/widgets/warp_license_dialog.dart';
 import 'package:hiddify/core/router/dialog/widgets/window_closing_dialog.dart';
 import 'package:hiddify/core/router/go_router/go_router_notifier.dart';
 import 'package:hiddify/features/app_update/model/remote_version_entity.dart';
+import 'package:hiddify/features/core_update/model/core_version_entity.dart';
 import 'package:hiddify/features/common/qr_code_dialog.dart';
 import 'package:hiddify/features/common/qr_code_scanner_screen.dart';
 import 'package:hiddify/features/settings/data/config_option_repository.dart';
@@ -242,5 +245,19 @@ class DialogNotifier extends _$DialogNotifier {
 
   Future<void> showCustomAlertFromErr(({String type, String? message}) err) async {
     return await _show<void>(CustomAlertDialog.fromErr(err));
+  }
+
+  Future<void> showCoreUpdate({
+    required String currentVersion,
+    required CoreVersionEntity newVersion,
+    required bool canIgnore,
+  }) async {
+    return await _show<void>(CoreUpdateDialog(currentVersion, newVersion, canIgnore: canIgnore));
+  }
+
+  Future<void> showCoreUpdateMobile({
+    required CoreVersionEntity newVersion,
+  }) async {
+    return await _show<void>(CoreUpdateMobileNotification(newVersion));
   }
 }

@@ -15,6 +15,10 @@ abstract class Constants {
   static const cfWarpTermsOfService = "https://www.cloudflare.com/application/terms/";
   static const tiinServiceUrl = "https://tiinservice.ru";
   static const tiinSubscribeUrl = "https://344988.snk.wtf/sub/";
+
+  static const coreGithubUrl = "https://github.com/hiddify/hiddify-next-core";
+  static const coreGithubReleasesApiUrl = "https://api.github.com/repos/hiddify/hiddify-next-core/releases";
+  static const coreGithubLatestReleaseUrl = "https://github.com/hiddify/hiddify-next-core/releases/latest";
 }
 
 const kAnimationDuration = Duration(milliseconds: 250);

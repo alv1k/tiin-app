@@ -160,7 +160,7 @@ class BoxService(
             }
 
             DefaultNetworkMonitor.start()
-            Libbox.setMemoryLimit(false)
+            Libbox.setMemoryLimit(!Settings.disableMemoryLimit)
             val newService = try {
                 Mobile.setup(
                     SetupOptions().also {

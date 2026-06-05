@@ -8,11 +8,9 @@ on:
       - '.vscode/'
       - 'appcast.xml'
   push:
-    branches:
-       - main
-       - dev
-       - android-fix-action-bug
-       - new-design-v2 
+     branches:
+        - main
+        - dev
     paths-ignore:
       - '**.md'
       - 'docs/**'

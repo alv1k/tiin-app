@@ -113,7 +113,8 @@ class PerAppProxy extends _$PerAppProxy with AppLogger {
     final t = ref.read(translationsProvider).requireValue;
     try {
       final result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['json']);
-      final file = File(result!.files.single.path!);
+      final file = File(result?.files.single.path ?? '');
+      if (file.path.isEmpty) return false;
       if (!await file.exists()) throw Exception('File does not exist: path = ${file.path}');
       final bytes = await file.readAsBytes();
       await _importJson(jsonDecode(utf8.decode(bytes)).toString());

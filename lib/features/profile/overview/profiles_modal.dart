@@ -19,7 +19,7 @@ class ProfilesModal extends HookConsumerWidget {
     final asyncProfiles = ref.watch(profilesNotifierProvider);
 
     ref.listen(profilesNotifierProvider, (_, next) {
-      if (next.hasValue && next.value!.isEmpty) {
+      if (next.hasValue && (next.value?.isEmpty ?? true)) {
         if (context.canPop()) context.pop();
       }
     });

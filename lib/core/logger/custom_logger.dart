@@ -49,21 +49,46 @@ class FileLogPrinter extends LoggyPrinter {
   final File _logFile;
   final LogLevel minLevel;
 
-  late final _sink = _logFile.openWrite(mode: FileMode.writeOnly);
+  IOSink? _sink;
+  bool _disposed = false;
+  bool _initialized = false;
 
-  @override
-  void onLog(LogRecord record) {
-    final time = record.time.toIso8601String().split('T')[1];
-    _sink.writeln("$time - $record");
-    if (record.error != null) {
-      _sink.writeln(record.error);
-    }
-    if (record.stackTrace != null) {
-      _sink.writeln(record.stackTrace);
+  Future<void> _init() async {
+    if (_initialized) return;
+    _initialized = true;
+    try {
+      final parent = _logFile.parent;
+      if (!parent.existsSync()) {
+        parent.createSync(recursive: true);
+      }
+      _sink = _logFile.openWrite(mode: FileMode.append);
+    } catch (e) {
+      _sink = null;
     }
   }
 
+  @override
+  void onLog(LogRecord record) {
+    if (_disposed) return;
+    _init().then((_) {
+      if (_disposed || _sink == null) return;
+      try {
+        final time = record.time.toIso8601String().split('T')[1];
+        _sink!.writeln("$time - $record");
+        if (record.error != null) {
+          _sink!.writeln(record.error);
+        }
+        if (record.stackTrace != null) {
+          _sink!.writeln(record.stackTrace);
+        }
+      } catch (_) {}
+    });
+  }
+
   void dispose() {
-    _sink.close();
+    _disposed = true;
+    try {
+      _sink?.close();
+    } catch (_) {}
   }
 }

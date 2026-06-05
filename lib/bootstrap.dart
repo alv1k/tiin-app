@@ -17,6 +17,7 @@ import 'package:hiddify/core/preferences/preferences_migration.dart';
 import 'package:hiddify/core/preferences/preferences_provider.dart';
 import 'package:hiddify/features/app/widget/app.dart';
 import 'package:hiddify/features/auto_start/notifier/auto_start_notifier.dart';
+import 'package:hiddify/features/core_update/notifier/core_update_notifier.dart';
 
 import 'package:hiddify/features/log/data/log_data_providers.dart';
 import 'package:hiddify/features/profile/data/profile_data_providers.dart';
@@ -88,6 +89,7 @@ Future<void> lazyBootstrap(WidgetsBinding widgetsBinding, Environment env) async
 
   await _safeInit("active profile", () => container.read(activeProfileProvider.future), timeout: 1000);
   await _init("hiddify-core", () => container.read(hiddifyCoreServiceProvider).init());
+  unawaited(container.read(coreUpdateNotifierProvider.notifier).check());
 
   if (!kIsWeb) {
     // await _safeInit(

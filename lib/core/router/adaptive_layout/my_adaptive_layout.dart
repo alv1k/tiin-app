@@ -7,6 +7,7 @@ import 'package:hiddify/core/model/constants.dart';
 import 'package:hiddify/core/router/adaptive_layout/shell_route_action.dart';
 import 'package:hiddify/core/router/go_router/helper/active_breakpoint_notifier.dart';
 import 'package:hiddify/core/router/go_router/routing_config_notifier.dart';
+import 'package:hiddify/core/theme/theme_extensions.dart';
 import 'package:hiddify/features/stats/widget/side_bar_stats_overview.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -25,6 +26,7 @@ class MyAdaptiveLayout extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = ref.watch(translationsProvider).requireValue;
+    final warm = Theme.of(context).extension<WarmThemeColors>();
     // focus switch management
     final primaryFocusHash = useState<int?>(null);
     final navScopeNode = useFocusScopeNode();
@@ -63,6 +65,12 @@ class MyAdaptiveLayout extends HookConsumerWidget {
                     node: navScopeNode,
                     child: NavigationRail(
                       extended: Breakpoint(context).isDesktop(),
+                      backgroundColor: warm?.surfaceContainerLow ?? const Color(0xFF221a17),
+                      selectedIconTheme: IconThemeData(color: warm?.primaryContainer ?? const Color(0xFFe37c33)),
+                      unselectedIconTheme: IconThemeData(color: warm?.onSurfaceVariant ?? const Color(0xFFdcc1b3)),
+                      selectedLabelTextStyle: TextStyle(color: warm?.primaryContainer ?? const Color(0xFFe37c33)),
+                      unselectedLabelTextStyle: TextStyle(color: warm?.onSurfaceVariant ?? const Color(0xFFdcc1b3)),
+                      indicatorColor: (warm?.primaryContainer ?? const Color(0xFFe37c33)).withValues(alpha: 0.2),
                       destinations: _navRailDests(_actions(t, showProfilesAction, isMobileBreakpoint)),
                       selectedIndex: navigationShell.currentIndex,
                       onDestinationSelected: (index) => _onTap(context, index),
@@ -86,6 +94,10 @@ class MyAdaptiveLayout extends HookConsumerWidget {
                   selectedIndex: navigationShell.currentIndex <= 1 ? navigationShell.currentIndex : 0,
                   destinations: _navDests(_actions(t, showProfilesAction, isMobileBreakpoint)),
                   onDestinationSelected: (index) => _onTap(context, index),
+                  backgroundColor: warm?.surfaceContainerLow ?? const Color(0xFF221a17),
+                  indicatorColor: (warm?.primaryContainer ?? const Color(0xFFe37c33)).withValues(alpha: 0.2),
+                  surfaceTintColor: Colors.transparent,
+                  labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
                 ),
               )
             : null,

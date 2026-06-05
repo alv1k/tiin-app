@@ -31,6 +31,7 @@ import 'package:meta/meta.dart';
 class ProfileParser with InfraLogger {
   static const infiniteTrafficThreshold = 920_233_720_368;
   static const infiniteTimeThreshold = 92_233_720_368;
+  static const maxSubscriptionLines = 500;
   static const allowedOverrideConfigs = [
     'connection-test-url',
     'direct-dns-address',
@@ -188,7 +189,7 @@ class ProfileParser with InfraLogger {
     int parallelism = 4,
   }) async {
     final content = await File(tempFilePath).readAsString();
-    final lines = content.split('\n');
+    final lines = content.split('\n').take(maxSubscriptionLines).toList();
 
     final results = List<String?>.filled(lines.length, null);
 

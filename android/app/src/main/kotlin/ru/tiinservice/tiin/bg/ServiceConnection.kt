@@ -106,11 +106,11 @@ class ServiceConnection(private val context: Context, callback: Callback, privat
         }
 
         override fun onServiceWriteLog(message: String?) {
-            //TODO("Not yet implemented")
+            Log.d(TAG, "service log: $message")
         }
 
         override fun onServiceResetLogs(messages: List<String?>?) {
-            //TODO("Not yet implemented")
+            Log.d(TAG, "service reset logs: ${messages?.size ?: 0} messages")
         }
     }
 }

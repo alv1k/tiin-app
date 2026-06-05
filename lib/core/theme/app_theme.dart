@@ -24,9 +24,12 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: mode.trueBlack ? Colors.black : scheme.background,
+      scaffoldBackgroundColor: mode.trueBlack ? const Color(0xFF140d0a) : const Color(0xFF19120f),
       fontFamily: fontFamily,
-      extensions: const <ThemeExtension<dynamic>>{ConnectionButtonTheme.light},
+      extensions: const <ThemeExtension<dynamic>>[
+        ConnectionButtonTheme.warm,
+        WarmThemeColors.dark,
+      ],
     );
   }
 

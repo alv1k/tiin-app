@@ -1,0 +1,91 @@
+{
+  "common": {
+    "appTitle": "TIIN",
+    "start": "Start",
+    "version": "Version",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "kContinue": "Continue",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "filter": "Filter",
+    "all": "All",
+    "pause": "Pause",
+    "resume": "Resume",
+    "clear": "Clear",
+    "close": "Close",
+    "auto": "Auto",
+    "manually": "Manually",
+    "name": "Name",
+    "url": "URL",
+    "add": "Add",
+    "clipboard": "Clipboard",
+    "addToClipboard": "Add to clipboard",
+    "scanQr": "Scan QR",
+    "free": "Free",
+    "warp": "WARP",
+    "fragment": "Fragment",
+    "help": "Help",
+    "save": "Save",
+    "update": "Update",
+    "share": "Share",
+    "edit": "Edit",
+    "delete": "Delete",
+    "discard": "Discard",
+    "import": "Import",
+    "export": "Export",
+    "later": "Later",
+    "ignore": "Ignore",
+    "quit": "Quit",
+    "notSet": "Not set",
+    "hide": "Hide",
+    "exit": "Exit",
+    "reset": "Reset",
+    "done": "Done",
+    "search": "Search",
+    "decline": "Decline",
+    "agree": "Agree",
+    "empty": "Empty",
+    "unknown": "Unknown",
+    "hidden": "Hidden",
+    "timeout": "Timeout",
+    "sort": "Sort",
+    "dashboard": "Dashboard"
+  },
+  "intro": {
+    "banner": "All you need for an unrestricted internet"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "quickSettings": "Quick settings"
+    },
+    "proxies": {
+      "title": "Proxies"
+    },
+    "profiles": {
+      "title": "Profiles"
+    },
+    "logs": {
+      "title": "Logs"
+    },
+    "about": {
+      "title": "About"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
+  "connection": {
+    "tapToConnect": "Tap to connect",
+    "connect": "Connect",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnect": "Disconnect",
+    "disconnecting": "Disconnecting...",
+    "reconnect": "Reconnect"
+  },
+  "errors": {
+    "unexpected": "Unexpected error"
+  }
+}

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,6 +13,8 @@ import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
 import 'package:hiddify/core/widget/adaptive_icon.dart';
 import 'package:hiddify/features/app_update/notifier/app_update_notifier.dart';
 import 'package:hiddify/features/app_update/notifier/app_update_state.dart';
+import 'package:hiddify/features/core_update/notifier/core_update_notifier.dart';
+import 'package:hiddify/features/core_update/notifier/core_update_state.dart';
 import 'package:hiddify/gen/assets.gen.dart';
 import 'package:hiddify/utils/utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -18,11 +22,24 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class AboutPage extends HookConsumerWidget {
   const AboutPage({super.key});
 
+  String _getCurrentCoreVersion() {
+    try {
+      final file = File('dependencies.properties');
+      if (file.existsSync()) {
+        final content = file.readAsStringSync();
+        final match = RegExp(r'core\.version=(\S+)').firstMatch(content);
+        return match?.group(1) ?? 'unknown';
+      }
+    } catch (_) {}
+    return 'unknown';
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = ref.watch(translationsProvider).requireValue;
     final appInfo = ref.watch(appInfoProvider).requireValue;
     final appUpdate = ref.watch(appUpdateNotifierProvider);
+    final coreUpdate = ref.watch(coreUpdateNotifierProvider);
 
     ref.listen(appUpdateNotifierProvider, (_, next) async {
       if (!context.mounted) return;
@@ -38,7 +55,38 @@ class AboutPage extends HookConsumerWidget {
       }
     });
 
+    ref.listen(coreUpdateNotifierProvider, (_, next) async {
+      if (!context.mounted) return;
+      switch (next) {
+        case CoreUpdateStateAvailable(:final versionInfo):
+          return await ref
+              .read(dialogNotifierProvider.notifier)
+              .showCoreUpdate(currentVersion: _getCurrentCoreVersion(), newVersion: versionInfo, canIgnore: true);
+        case CoreUpdateStateMobileNotification(:final versionInfo):
+          return await ref
+              .read(dialogNotifierProvider.notifier)
+              .showCoreUpdateMobile(newVersion: versionInfo);
+        case CoreUpdateStateError(:final error):
+          return CustomToast.error(t.presentShortError(error)).show(context);
+        case CoreUpdateStateNotAvailable():
+          return;
+        default:
+          return;
+      }
+    });
+
     final conditionalTiles = [
+      ListTile(
+        title: Text("Check Core Update"),
+        subtitle: Text("Core: ${_getCurrentCoreVersion()}"),
+        trailing: switch (coreUpdate) {
+          CoreUpdateStateChecking() => const SizedBox(width: 24, height: 24, child: CircularProgressIndicator()),
+          _ => const Icon(FluentIcons.arrow_sync_24_regular),
+        },
+        onTap: () async {
+          await ref.read(coreUpdateNotifierProvider.notifier).check();
+        },
+      ),
       if (appInfo.release.allowCustomUpdateChecker)
         ListTile(
           title: Text(t.pages.about.checkForUpdate),

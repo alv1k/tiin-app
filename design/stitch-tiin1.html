@@ -1,0 +1,333 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #19120f;
+            font-family: 'Inter', sans-serif;
+            color: #efdfdb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(38, 30, 27, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 182, 138, 0.1);
+        }
+        .warm-glow {
+            box-shadow: 0px 0px 30px rgba(227, 124, 51, 0.3);
+        }
+        .warm-glow-text {
+            text-shadow: 0 0 12px rgba(255, 182, 138, 0.8);
+        }
+        .pulse-animation {
+            animation: pulse 3s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; box-shadow: 0 0 20px rgba(227, 124, 51, 0.2); }
+            50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 40px rgba(216, 130, 76, 0.4); }
+            100% { transform: scale(1); opacity: 0.6; box-shadow: 0 0 20px rgba(227, 124, 51, 0.2); }
+        }
+        .bg-mesh {
+            background: radial-gradient(circle at 20% 20%, #19120f 0%, #140d0a 100%);
+            position: relative;
+        }
+        .bg-decor-1 {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 80%;
+            height: 80%;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(40px);
+            background: radial-gradient(circle, #e37c33 0%, transparent 70%);
+        }
+        .bg-decor-2 {
+            position: fixed;
+            bottom: -20%;
+            left: -10%;
+            width: 90%;
+            height: 90%;
+            opacity: 0.05;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(60px);
+            background: radial-gradient(circle, #ffb68a 0%, transparent 70%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .floating-squirrel {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#efdfdb",
+                    "surface-container": "#261e1b",
+                    "on-secondary-fixed-variant": "#4a4641",
+                    "tertiary": "#ffb68c",
+                    "secondary": "#ccc6be",
+                    "primary-fixed-dim": "#ffb68a",
+                    "surface-container-low": "#221a17",
+                    "on-secondary": "#33302b",
+                    "on-primary": "#522300",
+                    "on-primary-fixed": "#321300",
+                    "on-primary-container": "#512200",
+                    "surface": "#19120f",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#321200",
+                    "inverse-primary": "#984700",
+                    "background": "#19120f",
+                    "error-container": "#93000a",
+                    "surface-dim": "#19120f",
+                    "on-error": "#690005",
+                    "surface-tint": "#ffb68a",
+                    "on-surface-variant": "#dcc1b3",
+                    "primary": "#ffb68a",
+                    "tertiary-fixed-dim": "#ffb68c",
+                    "inverse-on-surface": "#382e2c",
+                    "on-tertiary-fixed-variant": "#753401",
+                    "on-tertiary-container": "#522200",
+                    "surface-container-highest": "#3c3330",
+                    "secondary-fixed-dim": "#ccc6be",
+                    "on-tertiary": "#532200",
+                    "surface-container-high": "#312825",
+                    "surface-bright": "#413734",
+                    "inverse-surface": "#efdfdb",
+                    "on-secondary-fixed": "#1e1b17",
+                    "on-background": "#efdfdb",
+                    "primary-container": "#e37c33",
+                    "surface-variant": "#3c3330",
+                    "secondary-container": "#4c4943",
+                    "secondary-fixed": "#e8e1da",
+                    "on-secondary-container": "#bdb7b0",
+                    "outline-variant": "#554338",
+                    "tertiary-fixed": "#ffdbc9",
+                    "outline": "#a48c7f",
+                    "tertiary-container": "#d8824c",
+                    "on-primary-fixed-variant": "#743500",
+                    "primary-fixed": "#ffdbc8",
+                    "error": "#ffb4ab",
+                    "surface-container-lowest": "#140d0a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "gutter": "16px",
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "container-padding": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["JetBrains Mono"],
+                    "data-lg": ["JetBrains Mono"],
+                    "headline-lg": ["Space Grotesk"],
+                    "display-lg": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "data-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col items-center overflow-x-hidden">
+<!-- Decorative Overlays -->
+<div class="bg-decor-1"></div>
+<div class="bg-decor-2"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-2xl border-b border-white/5 shadow-[0px_4px_30px_rgba(0,0,0,0.5)] flex justify-between items-center px-gutter h-16">
+<button class="active:scale-95 transition-transform text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-container via-tertiary to-primary-container tracking-tight uppercase">TIIN SERVICE</h1>
+<button class="active:scale-95 transition-transform text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<main class="w-full max-w-[1200px] flex-grow pt-24 pb-32 px-gutter flex flex-col items-center gap-stack-lg relative z-10">
+<!-- Connection Status & Power Button Section -->
+<section class="flex flex-col items-center w-full py-unit text-center relative">
+<!-- Decorative Acorn Badge representing 'Stored Energy' -->
+<div class="absolute -right-2 top-0 z-20 w-16 h-16 opacity-90 rotate-12 drop-shadow-[0_0_15px_rgba(227,124,51,0.3)]">
+
+</div>
+<div class="relative flex items-center justify-center mb-stack-md z-10" id="status-container">
+<!-- Outer Ring Glow -->
+<div class="absolute w-60 h-60 rounded-full border-2 border-primary-container/10 warm-glow opacity-30" id="glow-ring"></div>
+<!-- Main Power Button -->
+<button class="relative z-10 w-56 h-56 flex items-center justify-center transition-all duration-500 active:scale-90 group drop-shadow-[0_0_30px_rgba(227,124,51,0.5)]" id="power-button" onclick="toggleConnection()">
+<div class="absolute inset-0 rounded-full opacity-0 bg-gradient-to-br from-primary-container via-tertiary-container to-tertiary transition-opacity duration-700 blur-2xl" id="button-fill"></div>
+<img alt="Connect Acorn" class="w-full h-full object-contain relative z-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY_RgXIp6fMCDt6AjFJMYB3MbCTMfPtk0biVvWdPgpKHqcilusJGKDqjuEAbcpfXs-AzMNEYIXQWBsJd3w7dWEv1C7uoVIRSN9dO0r1wkZGROI9IGD8fAjwq4Dp3PAwjUI9KZ9s_ZWFuQNYZ1rXKtaYXHzPWVLPo4XGzyY2p5v_QakpoblauDNFJ6ggj_U3p4D554XZyrc-4Ors75L9MSrLO7XVjcpt8gLFKs8IruarhCl9OaJsYW9URb1HHtbvNsqkzUZ1F7sPkCw">
+</button>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="flex items-center gap-2 mb-1">
+<p class="font-headline-lg-mobile text-primary-container transition-all duration-300" id="connection-label">Ready to Connect</p>
+</div>
+<div class="font-data-lg text-data-lg text-on-surface-variant font-label-sm opacity-60" id="timer">00:00:00</div>
+</div>
+</section>
+<!-- Technical Stats Grid -->
+<section class="w-full grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Ping Card -->
+<div class="glass-card rounded-xl p-container-padding flex items-center justify-between group hover:border-primary-container/30 transition-all border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="speed">speed</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Ping</span>
+</div>
+<span class="font-data-lg text-data-lg text-primary-container">24ms</span>
+</div>
+<!-- Protocol Card -->
+<div class="glass-card rounded-xl p-container-padding flex items-center justify-between group hover:border-primary-container/30 transition-all border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="terminal">terminal</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Protocol</span>
+</div>
+<div class="relative">
+<select class="bg-transparent border-none text-primary-container font-label-sm focus:ring-0 cursor-pointer text-right appearance-none pr-6">
+<option class="bg-surface text-on-surface" selected="">VLESS</option>
+<option class="bg-surface text-on-surface">Hysteria2</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-sm text-primary-container" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Subscription Card with Mascot -->
+<section class="w-full relative">
+<!-- Squirrel Mascot -->
+<div class="absolute -top-16 -right-4 w-32 h-32 z-20 floating-squirrel drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+
+</div>
+<div class="relative overflow-hidden glass-card rounded-xl p-container-padding border-tertiary/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+<!-- Accent Glows -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-tertiary/10 blur-[80px]"></div>
+<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-primary-container/5 blur-[80px]"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-stack-md">
+<div class="flex flex-col max-w-[70%]">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified">verified</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Premium Plan</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Subscription expires in 15 days (Dec 20, 2024)</p>
+</div>
+<button class="bg-gradient-to-r from-primary-container to-tertiary-container hover:opacity-90 text-on-primary px-8 py-3 rounded-full font-headline-lg-mobile text-[16px] font-bold transition-all active:scale-95 shadow-[0_8px_20px_rgba(227,124,51,0.3)] border border-white/10">
+                        Renew Subscription
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-surface-container-low/60 backdrop-blur-3xl border-t border-white/5 shadow-[0_-8px_32px_rgba(0,0,0,0.6)] flex justify-around items-center h-20 px-4">
+<!-- Connect (Active) -->
+<a class="flex flex-col items-center justify-center text-primary-container drop-shadow-[0_0_12px_rgba(227,124,51,0.6)] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-sm text-label-sm mt-1 font-medium">Connect</span>
+</a>
+<!-- Servers -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-50 hover:opacity-100 transition-opacity active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="language">language</span>
+<span class="font-label-sm text-label-sm mt-1">Servers</span>
+</a>
+<!-- Stats -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-50 hover:opacity-100 transition-opacity active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-sm text-label-sm mt-1">Stats</span>
+</a>
+<!-- Account -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-50 hover:opacity-100 transition-opacity active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm mt-1">Account</span>
+</a>
+</nav>
+<script>
+        let isConnected = false;
+        let timerInterval;
+        let seconds = 0;
+
+        function toggleConnection() {
+            isConnected = !isConnected;
+            const button = document.getElementById('power-button');
+            const buttonFill = document.getElementById('button-fill');
+            const glowRing = document.getElementById('glow-ring');
+            const label = document.getElementById('connection-label');
+            const icon = document.getElementById('power-icon');
+
+            if (isConnected) {
+                // Connected State
+                buttonFill.classList.replace('opacity-0', 'opacity-100');
+                glowRing.classList.add('pulse-animation');
+                glowRing.classList.remove('opacity-30');
+                label.innerText = 'Connected';
+                label.classList.add('warm-glow-text');
+                label.classList.replace('text-primary-container', 'text-tertiary');
+                icon.classList.replace('text-primary-container', 'text-on-primary');
+                startTimer();
+            } else {
+                // Disconnected State
+                buttonFill.classList.replace('opacity-100', 'opacity-0');
+                glowRing.classList.remove('pulse-animation');
+                glowRing.classList.add('opacity-30');
+                label.innerText = 'Ready to Connect';
+                label.classList.remove('warm-glow-text');
+                label.classList.replace('text-tertiary', 'text-primary-container');
+                icon.classList.replace('text-on-primary', 'text-primary-container');
+                stopTimer();
+            }
+        }
+
+        function startTimer() {
+            seconds = 0;
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                seconds++;
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            seconds = 0;
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
+            const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+            const s = (seconds % 60).toString().padStart(2, '0');
+            const timerEl = document.getElementById('timer');
+            if(timerEl) timerEl.innerText = `${h}:${m}:${s}`;
+        }
+    </script>
+
+
+</body></html>

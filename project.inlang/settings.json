@@ -1,7 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/project-settings",
-  "sourceLanguageTag": "en",
+  "sourceLanguageTag": "ru",
   "languageTags": [
+    "ru",
     "en",
     "ar",
     "ckb-KUR",
@@ -10,7 +11,6 @@
     "fr",
     "id",
     "pt-BR",
-    "ru",
     "tr",
     "zh-CN",
     "zh-TW",

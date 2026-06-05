@@ -153,18 +153,18 @@ class LogsPage extends HookConsumerWidget with PresLogger {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                if (log.level != null)
+                                if (log.level case final level?)
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        log.level!.name.toUpperCase(),
+                                        level.name.toUpperCase(),
                                         style: Theme.of(
                                           context,
-                                        ).textTheme.labelMedium?.copyWith(color: log.level!.color),
+                                        ).textTheme.labelMedium?.copyWith(color: level.color),
                                       ),
-                                      if (log.time != null)
-                                        Text(log.time!.toString(), style: Theme.of(context).textTheme.labelSmall),
+                                      if (log.time case final time?)
+                                        Text(time.toString(), style: Theme.of(context).textTheme.labelSmall),
                                     ],
                                   ),
                                 Text(extractMessage(log.message), style: Theme.of(context).textTheme.bodySmall),

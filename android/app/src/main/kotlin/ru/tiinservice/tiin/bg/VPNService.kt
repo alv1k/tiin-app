@@ -24,6 +24,7 @@ class VPNService : VpnService(), PlatformInterfaceWrapper {
 
     companion object {
         private const val TAG = "A/VPNService"
+        private const val MAX_PACKAGES = 500
     }
 
     private val service = BoxService(this, this)
@@ -58,23 +59,39 @@ class VPNService : VpnService(), PlatformInterfaceWrapper {
 
     var systemProxyAvailable = false
     var systemProxyEnabled = false
+    private var packageCount = 0
+
     fun addIncludePackage(builder: Builder, packageName: String) {
-        if (packageName == this.packageName) { 
+        if (packageName == this.packageName) {
             Log.d("VpnService","Cannot include myself: $packageName")
             return
         }
-        try {     
+        if (packageCount >= MAX_PACKAGES) {
+            Log.w("VpnService","Skipping $packageName: reached max packages limit ($MAX_PACKAGES)")
+            return
+        }
+        try {
             Log.d("VpnService","Including $packageName")
             builder.addAllowedApplication(packageName)
+            packageCount++
         } catch (e: NameNotFoundException) {
+        } catch (e: IllegalStateException) {
+            Log.w("VpnService","Failed to include $packageName: ${e.message}")
         }
     }
 
     fun addExcludePackage(builder: Builder, packageName: String) {
-        try {     
+        if (packageCount >= MAX_PACKAGES) {
+            Log.w("VpnService","Skipping $packageName: reached max packages limit ($MAX_PACKAGES)")
+            return
+        }
+        try {
             Log.d("VpnService","Excluding $packageName")
             builder.addDisallowedApplication(packageName)
+            packageCount++
         } catch (e: NameNotFoundException) {
+        } catch (e: IllegalStateException) {
+            Log.w("VpnService","Failed to exclude $packageName: ${e.message}")
         }
     }
 
@@ -95,6 +112,7 @@ class VPNService : VpnService(), PlatformInterfaceWrapper {
     }
 //        service.fileDescriptor?.close()
 
+        packageCount = 0
         val builder = Builder()
             .setSession("com.android.chrome")
             .setMtu(1400)
